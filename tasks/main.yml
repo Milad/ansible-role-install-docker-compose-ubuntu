@@ -3,10 +3,12 @@
 - name: Collect kernel name
   command: uname -s
   register: s
+  changed_when: no
 
 - name: Collect machine hardware name
   command: uname -m
   register: m
+  changed_when: no
 
 - name: Download docker-compose binary
   uri:
