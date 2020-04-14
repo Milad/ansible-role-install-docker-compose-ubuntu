@@ -28,4 +28,10 @@
   become: yes
 
 - name: Try run docker-compose
-  command: docker-compose --version
+  shell: docker-compose --version
+  register: {{ docker_compose_version }}
+  ignore_errors: True
+
+- name: Print output
+  debug:
+    msg: "{{ docker_compose_version }}"
