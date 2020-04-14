@@ -29,7 +29,7 @@
 
 - name: Try run docker-compose
   shell: docker-compose --version
-  register: {{ docker_compose_version }}
+  register: docker_compose_version
   ignore_errors: True
 
 - name: Print output
