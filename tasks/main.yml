@@ -20,7 +20,8 @@
   become: yes
 
 - name: Download Command-line completion
-  url: "https://raw.githubusercontent.com/docker/compose/{{ dc_ver }}/contrib/completion/bash/docker-compose"
+  uri:
+    url: "https://raw.githubusercontent.com/docker/compose/{{ dc_ver }}/contrib/completion/bash/docker-compose"
     method: GET
     dest: /etc/bash_completion.d/docker-compose
     owner: root
