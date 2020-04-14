@@ -30,8 +30,8 @@
 - name: Try run docker-compose
   shell: docker-compose --version
   register: docker_compose_version
-  ignore_errors: True
+  changed_when: docker_compose_version.failed
 
 - name: Print output
   debug:
-    msg: "{{ docker_compose_version }}"
+    msg: "{{ docker_compose_version.stdout }}"
