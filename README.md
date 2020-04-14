@@ -6,7 +6,7 @@ Installs docker-compose.
 Requirements
 ------------
 
-None
+Gathering facts must be enabled. 
 
 Role Variables
 --------------

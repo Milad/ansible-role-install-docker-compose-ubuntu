@@ -1,18 +1,13 @@
 ---
 
-- name: Collect kernel name
-  shell: uname -s
-  register: s
-  changed_when: no
-
-- name: Collect machine hardware name
-  shell: uname -m
-  register: m
-  changed_when: no
+- name: Collect some facts
+  set_fact:
+    kernel: "{{ ansible_facts['system'] }}"
+    machine: "{{ ansible_facts['machine'] }}"
 
 - name: Download docker-compose binary
   uri:
-    url: "https://github.com/docker/compose/releases/download/{{ dc_ver }}/docker-compose-{{ s.stdout }}-{{ m.stdout }}"
+    url: "https://github.com/docker/compose/releases/download/{{ dc_ver }}/docker-compose-{{ kernel }}-{{ machine }}"
     method: GET
     dest: /usr/local/bin/docker-compose
     owner: root
