@@ -12,7 +12,8 @@ galaxy_info:
         - bionic
   galaxy_tags:
     - docker
-    - docker-compose
+    - dockercompose
+    - compose
     - ubuntu
     - bionic
 

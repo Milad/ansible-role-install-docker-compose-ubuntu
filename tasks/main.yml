@@ -1,11 +1,11 @@
 ---
 
 - name: Collect kernel name
-  shell: uname -s
+  command: uname -s
   register: s
 
 - name: Collect machine hardware name
-  shell: uname -m
+  command: uname -m
   register: m
 
 - name: Download docker-compose binary
@@ -31,4 +31,4 @@
   become: yes
 
 - name: Try run docker-compose
-  shell: docker-compose --version
+  command: docker-compose --version
