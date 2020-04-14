@@ -1,12 +1,12 @@
 ---
 
 - name: Collect kernel name
-  command: uname -s
+  shell: uname -s
   register: s
   changed_when: no
 
 - name: Collect machine hardware name
-  command: uname -m
+  shell: uname -m
   register: m
   changed_when: no
 
