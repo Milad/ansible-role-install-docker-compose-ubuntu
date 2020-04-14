@@ -1,4 +1,4 @@
 ---
 
 # Docker compose version to download
-dc_ver="1.25.4"
+dc_ver: "1.25.4"
