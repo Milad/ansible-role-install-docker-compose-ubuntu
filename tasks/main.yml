@@ -37,6 +37,7 @@
   shell: docker-compose --version
   register: docker_compose_version
   changed_when: docker_compose_version.failed
+  ignore_errors: yes
 
 - name: Print output
   debug:
