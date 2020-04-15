@@ -14,6 +14,9 @@
     group: root
     mode: "0755"
     force: yes
+    status_code:
+      - "200"
+      - "304"
   become: yes
 
 - name: Download Command-line completion
