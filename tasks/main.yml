@@ -25,6 +25,9 @@
     group: root
     mode: "0644"
     force: yes
+    status_code:
+      - "200"
+      - "304"
   become: yes
 
 - name: Try run docker-compose
