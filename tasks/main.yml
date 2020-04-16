@@ -32,17 +32,3 @@
       - "200"
       - "304"
   become: yes
-
-# @see https://docs.ansible.com/ansible/latest/scenario_guides/guide_docker.html
-- name: Install python3-pip
-  apt:
-    pkg:
-      - python3-pip
-    state: latest
-    update_cache: yes
-  become: yes
-
-- name: Install docker-compose for Python
-  pip:
-    name: docker-compose
-    state: latest
